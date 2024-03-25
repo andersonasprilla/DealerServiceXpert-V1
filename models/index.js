@@ -11,3 +11,4 @@ Client.belongsTo(User, {
 });
 
 module.exports = { User, Client };
+ 
