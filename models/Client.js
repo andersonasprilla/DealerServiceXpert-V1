@@ -21,7 +21,7 @@ Client.init(
       allowNull: false,
     },
     repairOrderNumber: {
-      type: DataTypes.INTEGER, 
+      type: DataTypes.STRING, 
       allowNull: false,
     },
     carModel: {
