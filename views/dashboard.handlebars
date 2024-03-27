@@ -1,0 +1,190 @@
+<table id="client">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>RO Number</th>
+                <th>Model</th>
+                <th>Service Requested</th>
+                <th>Waiting</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+<script id="table-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{name}}</td>
+        <td>{{phoneNumber}}</td>
+        <td>{{repairOrderNumber}}</td>
+        <td>{{carModel}}</td>
+        <td>{{serviceRequested}}</td>
+        <td>{{waitingForService}}</td>
+    </tr>
+    {{/each}}
+</script>
+
+<!-- This is the form for updating a dish. According to MVC framework, what is this form responsible for? -->
+<!-- This form is responsible for the UI logic, or the components in the View that the user will interact with. -->
+<!--What isn't it responsible for? -->
+<!--It is not responsible for data-related logic, requests, or business-logic. -->
+
+{{!-- <div class="edit-dish-container">
+  <h2>
+    Update Dish
+  </h2>
+  <form class="edit-dish-form">
+    <label for="dish_name">
+      Dish Name:
+    </label>
+    <br />
+    <textarea id="dish_name" name="dish_name" rows="2" cols="30">
+      {{dish_name}}
+    </textarea>
+    <br />
+    <label for="description">
+      Description:
+    </label>
+    <br />
+    <textarea id="description" name="description" rows="5" cols="30">
+      {{description}}
+    </textarea>
+    <br />
+    <label for="guest_name">
+      Guest Name:
+    </label>
+    <br />
+    <textarea id="guest_name" name="guest_name" rows="2" cols="30">
+      {{guest_name}}
+    </textarea>
+    <br />
+    <br />
+    <input type="checkbox" id="has_nuts" name="has_nuts" value="true" />
+    <label for="has_nuts">
+      Check box if this dish contains nuts
+    </label>
+    <br />
+    <button type="submit" value="Submit">
+      Submit
+    </button>
+  </form>
+</div>
+<script src="/js/edit-dish.js"></script> --}}
+
+{{!-- <table class="is-linktable"> as the main container
+thead the optional top part of the table
+tfoot the optional bottom part of the table
+tbody the main content of the table
+tr each table row
+th a table cell heading
+td a table cell --}}
+
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>RO Number</th>
+      <th>Service Requested</th>
+      <th>Waiting</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <th>1</th>
+        <td>{{name}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="is-link">
+        <th>Link row</th>
+        <td>Two</td>
+        <td>Three</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+    
+      <tr>
+        <th class="is-primary">Primary th cell</th>
+        <td>Two</td>
+        <td class="is-primary">Primary td cell</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+      <tr class="is-primary">
+        <th>Primary row</th>
+        <td>Two</td>
+        <td>Three</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+    
+      <tr>
+        <th class="is-info">Info th cell</th>
+        <td>Two</td>
+        <td class="is-info">Info td cell</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+      <tr class="is-info">
+        <th>Info row</th>
+        <td>Two</td>
+        <td>Three</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+    
+      <tr>
+        <th class="is-success">Success th cell</th>
+        <td>Two</td>
+        <td class="is-success">Success td cell</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+      <tr class="is-success">
+        <th>Success row</th>
+        <td>Two</td>
+        <td>Three</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+    
+      <tr>
+        <th class="is-warning">Warning th cell</th>
+        <td>Two</td>
+        <td class="is-warning">Warning td cell</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+      <tr class="is-warning">
+        <th>Warning row</th>
+        <td>Two</td>
+        <td>Three</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+    
+      <tr>
+        <th class="is-danger">Danger th cell</th>
+        <td>Two</td>
+        <td class="is-danger">Danger td cell</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+      <tr class="is-danger">
+        <th>Danger row</th>
+        <td>Two</td>
+        <td>Three</td>
+        <td>Four</td>
+        <td>Five</td>
+      </tr>
+    
+  </tbody>
+</table>
