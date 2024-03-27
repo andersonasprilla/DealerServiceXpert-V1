@@ -11,7 +11,6 @@ router.get('/', withAuth, async (req, res) => {
     res.status(401).json({ message: 'Please log in to view clients.' });
     return;
   }
-
   try {
     // Fetch clients associated with the logged-in user's ID
     const clientData = await Client.findAll({
@@ -25,7 +24,6 @@ router.get('/', withAuth, async (req, res) => {
     res.status(500).json({ message: 'Failed to fetch client data.' });
   }
 });
-
 
 // @desc    Create a  clients
 // @route   POST /api/clients/
