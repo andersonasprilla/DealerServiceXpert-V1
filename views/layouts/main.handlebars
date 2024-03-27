@@ -1,97 +1,50 @@
-{{!-- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html lang='en'>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car-Service-CRM</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta charset='UTF-8' />
+  <title>Car-Service</title>
+  <link rel='stylesheet' href='/css/jass.css' />
+  <link rel='stylesheet' href='/css/style.css' />
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
+  <div class='flex-column justify-space-around'>
+    <header class='display-flex justify-space-between align-center p-2'>
       <h1>
-        {{!-- <span role="img" aria-label="money">💸</span> --}}
-        <a href="/">Car-Service</a>
+        Car-Service
       </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
     </header>
-    <main class="container container-fluid mt-5">
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
+    <nav>
+      {{#if logged_in}}
+      <a href="/dashboard">Dashboard</a> |
+      <button class="no-button" id="logout">Logout</button>
+      {{else}}
+      <a href="/login">Login</a>
+      {{/if}}
+    </nav>
+    {{!-- <ul class="navbar">
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+      <li><a class="link" href="/dashboard">Dashboard</a></li>
+      {{#if loggedIn}}
+      <li><a class="link" href="/" id="logout">Logout</a></li>
+      {{else}}
+      <li><a class="link" href="/login">Login</a></li>
+      {{/if}}
+    </ul> --}}
+    <main class='container container-fluid mt-5'>
+      {{{body}}}
+    </main>
+  </div>
 </body>
 
-</html> --}}
-
-{{!-- 
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <title>Car Repair Service</title>
-    <link rel='stylesheet' href='/css/jass.css' />
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-
-  <body>
-    <div class='flex-column justify-space-around'>
-      <header class='display-flex justify-space-between align-center p-2'>
-        <h1>
-          &#127881 Potluck Party! &#127881
-        </h1>
-      </header>
-      <main class='container container-fluid mt-5'>
-        {{{body}}}
-      </main>
-    </div>
-  </body>
-
-</html> --}}
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <title>Car-Service</title>
-    <link rel='stylesheet' href='/css/jass.css' />
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-
-  <body>
-    <div class='flex-column justify-space-around'>
-      <header class='display-flex justify-space-between align-center p-2'>
-        <h1>
-          Car-Service
-        </h1>
-      </header>
-      <nav>
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-      <main class='container container-fluid mt-5'>
-        {{{body}}}
-      </main>
-    </div>
-  </body>
+<footer class="footer">
+  <div class="row">
+    <p>
+      Car Service CRM
+    </p>
+  </div>
+</footer>
 
 </html>
