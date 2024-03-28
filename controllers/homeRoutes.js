@@ -1,7 +1,4 @@
 const router = require('express').Router();
-const { Client, User } = require('../models');
-const withAuth = require('../utils/auth');
-
 
 //http://localhost:3001/
 router.get('/', (req, res) => {
@@ -12,8 +9,6 @@ router.get('/', (req, res) => {
   }
   res.render('login');
 });
-
-
 
 //http://localhost:3001/login
 router.get('/login', (req, res) => {
