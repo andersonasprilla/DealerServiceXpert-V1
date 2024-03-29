@@ -18,27 +18,32 @@
       </h1>
     </header>
     <nav>
-      {{#if logged_in}}
-
-      <a href="/dashboard">Dashboard</a> |
-      <button class="button" id="create">Create Client</button>
-      <button class="no-button" id="logout">Logout</button>
-      {{else}}
-      <a href="/login">Login</a>
-      {{/if}}
+      <li><a class="link" href="/">Home</a></li>
+          <li><a class="link" href="/dashboard">Dashboard</a></li>
+          {{#if loggedIn}}
+          <li><a class="link"  id="logout">Logout</a></li>
+          {{else}}
+          <li><a class="link" href="/login">Login</a></li>
+          {{/if}}
     </nav>
     <main class='container container-fluid mt-5'>
       {{{body}}}
     </main>
   </div>
-</body>
-
-<footer class="footer">
+  <footer class="footer">
   <div class="row">
     <p>
       Car Service CRM
     </p>
   </div>
 </footer>
+{{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+
 
 </html>
+ 
+
