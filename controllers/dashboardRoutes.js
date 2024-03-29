@@ -30,7 +30,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 ]
     });
 
-    res.render('dashboard', { clients: ClientData, loggedIn: true });
+    res.render('dashboard', { clients: clientData, loggedIn: true });
   } catch (error) {
     console.error('Error fetching client data:', error);
     res.status(500).json({ message: 'Failed to fetch client data.' });
