@@ -2,12 +2,11 @@ const router = require('express').Router();
 const { Client, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/',  withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const clientData = await Client.findAll({
-      where: { user_id: req.session.user_id }, 
+      where: { user_id: req.session.user_id },
       attributes: [
-       
         'name',
         'phoneNumber',
         'repairOrderNumber',
@@ -20,12 +19,10 @@ router.get('/',  withAuth, async (req, res) => {
         attributes: {
           exclude: ["password"]
         }
-    },
-]
+      },
+      ]
     });
-
     const clients = clientData.map(client => client.get({ plain: true }))
-    console.log(clients)
     res.render('dashboard', { clients, loggedIn: true });
   } catch (error) {
     console.error('Error fetching client data:', error);
