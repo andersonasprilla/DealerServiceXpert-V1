@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
   <meta charset='UTF-8' />
   <title>Car-Service</title>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
   <link rel='stylesheet' href='/css/style.css' />
 </head>
 
@@ -17,33 +16,85 @@
         Car-Service
       </h1>
     </header>
-    <nav>
-      <li><a class="link" href="/">Home</a></li>
-          <li><a class="link" href="/dashboard">Dashboard</a></li>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="/dashboard">Dashboard</a>
           {{#if loggedIn}}
-          <li><a class="link"  id="logout">Logout</a></li>
-          {{else}}
-          <li><a class="link" href="/login">Login</a></li>
+          <button class="button is-primary is-hovered js-modal-trigger" id="createClientBtn">Create Client</button>
+          <a class="navbar-item" id="logout">Logout</a>
           {{/if}}
+        </div>
+      </div>
     </nav>
+
     <main class='container container-fluid mt-5'>
       {{{body}}}
     </main>
   </div>
-  <footer class="footer">
-  <div class="row">
-    <p>
-      Car Service CRM
-    </p>
-  </div>
-</footer>
-{{#if loggedIn}}
+  <footer class="footer has-background-light">
+    <div class="content has-text-centered">
+      <div class="columns">
+        <!-- About Us -->
+        <div class="column">
+          <h3>About Us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo
+            mollis, auctor consequat urna.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="column">
+          <h3>Contact Info</h3>
+          <ul>
+            <li>Phone: (123) 456-7890</li>
+            <li>Email: info@example.com</li>
+            <li>Address: 1234 Street, City, Country</li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="column">
+          <h3>Follow Us</h3>
+          <div class="social-media-links">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i>
+              Twitter</a><br>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i>
+              Facebook</a><br>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i>
+              Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
+  
   {{/if}}
 </body>
 
 
 
 </html>
- 
-

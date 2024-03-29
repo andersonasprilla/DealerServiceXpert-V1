@@ -1,28 +1,28 @@
-<table id="client">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Phone Number</th>
-                <th>RO Number</th>
-                <th>Model</th>
-                <th>Service Requested</th>
-                <th>Waiting</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each clients as |client| }}
-    <tr>
-       
-        <td>{{client.name}}</td>
-        <td>{{client.phoneNumber}}</td>
-        <td>{{client.repairOrderNumber}}</td>
-        <td>{{client.carModel}}</td>
-        <td>{{client.serviceRequested}}</td>
-        <td>{{client.waitingForService}}</td>
-    </tr>
-    {{/each}}
-        </tbody>
-    </table>
+<table class="table is-striped is-narrow is-hoverable is-fullwidth" id="client">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>RO Number</th>
+            <th>Model</th>
+            <th>Service Requested</th>
+            <th>Waiting</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each clients as |client| }}
+        <tr>
+            <td>{{client.name}}</td>
+            <td>{{client.phoneNumber}}</td>
+            <td>{{client.repairOrderNumber}}</td>
+            <td>{{client.carModel}}</td>
+            <td>{{client.serviceRequested}}</td>
+            <td>{{client.waitingForService}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
 
     
 
