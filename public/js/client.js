@@ -7,8 +7,9 @@ async function createClientHandler(event) {
     const carModel = document.getElementById('carModel-signup').value.trim()
     const serviceRequested = document.getElementById('serviceRequested-signup').value.trim()
     const waitingForService = document.getElementById('waitingForService-signup').checked
+    console.log(waitingForService)
 
-    if(name && phoneNumber && repairOrderNumber && carModel && serviceRequested && waitingForService) {
+    if(name && phoneNumber && repairOrderNumber && carModel && serviceRequested ) {
         const response = await fetch('/api/clients', {
             method: 'post',
             body: JSON.stringify({
