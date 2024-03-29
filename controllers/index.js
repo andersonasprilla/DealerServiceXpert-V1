@@ -5,7 +5,7 @@ const homeRoutes = require('./homeRoutes');
 
 //http://localhost:3001/
 router.use('/', homeRoutes);
-router.use('/', dashboardRoutes)
+router.use('/dashboard', dashboardRoutes)
 
 //api routes
 router.use('/api', apiRoutes);

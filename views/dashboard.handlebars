@@ -1,7 +1,6 @@
 <table id="client">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Name</th>
                 <th>Phone Number</th>
                 <th>RO Number</th>
@@ -10,21 +9,22 @@
                 <th>Waiting</th>
             </tr>
         </thead>
-        <tbody></tbody>
-    </table>
-
-<script id="table-template" type="text/x-handlebars-template">
-    {{#each this}}
+        <tbody>
+            {{#each clients as |client| }}
     <tr>
-        <td>{{id}}</td>
-        <td>{{name}}</td>
-        <td>{{phoneNumber}}</td>
-        <td>{{repairOrderNumber}}</td>
-        <td>{{carModel}}</td>
-        <td>{{serviceRequested}}</td>
-        <td>{{waitingForService}}</td>
+       
+        <td>{{client.name}}</td>
+        <td>{{client.phoneNumber}}</td>
+        <td>{{client.repairOrderNumber}}</td>
+        <td>{{client.carModel}}</td>
+        <td>{{client.serviceRequested}}</td>
+        <td>{{client.waitingForService}}</td>
     </tr>
     {{/each}}
-</script>
+        </tbody>
+    </table>
+
+    
+
 
 <script src="./js/client.js"></script>
