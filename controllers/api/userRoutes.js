@@ -21,7 +21,8 @@ router.get('/', async (req, res) => {
 // @route   POST /api/users/login
 // @access  Public
 router.post('/login', async (req, res) => {
-  try {
+  console.log(req.body)
+  // try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
@@ -46,9 +47,9 @@ router.post('/login', async (req, res) => {
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
-  } catch (err) {
-    res.status(400).json(err);
-  }
+  // } catch (err) {
+  //   res.status(400).json(err);
+  // }
 });
 
 // @desc    Logout a user

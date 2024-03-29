@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Client, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/',  withAuth, async (req, res) => {
   try {
     const clientData = await Client.findAll({
       where: { user_id: req.session.user_id }, 
@@ -17,20 +17,16 @@ router.get('/dashboard', withAuth, async (req, res) => {
       ],
       include: [{
         model: User,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        include: {
-            model: User,
-            attributes: ['username']
+        attributes: {
+          exclude: ["password"]
         }
     },
-    {
-        model: User,
-        attributes: ['username']
-    }
 ]
     });
 
-    res.render('dashboard', { clients: clientData, loggedIn: true });
+    const clients = clientData.map(client => client.get({ plain: true }))
+    console.log(clients)
+    res.render('dashboard', { clients, loggedIn: true });
   } catch (error) {
     console.error('Error fetching client data:', error);
     res.status(500).json({ message: 'Failed to fetch client data.' });
