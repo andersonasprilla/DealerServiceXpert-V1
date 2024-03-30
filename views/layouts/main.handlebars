@@ -28,9 +28,11 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item" href="/dashboard">Dashboard</a>
+          
           {{#if loggedIn}}
-          <button class="button is-primary is-hovered js-modal-trigger" id="createClientBtn">Create Client</button>
+          <button class="button is-primary is-hovered js-modal-trigger" data-target="modal-js-example">
+            Create Client
+          </button>
           <a class="navbar-item" id="logout">Logout</a>
           {{/if}}
         </div>
@@ -88,10 +90,71 @@
     </div>
   </footer>
 
+  {{!-- Begin::Client Modal --}}
+  <div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">New Client</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <form class="signup-form" id="clientForm">
+          <div class="field">
+            <label class="label" for="name-signup">Name:</label>
+            <div class="control">
+              <input class="input" type="text" id="name-signup" placeholder="Name">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="phoneNumber-signup">Phone Number:</label>
+            <div class="control">
+              <input class="input" type="text" id="phoneNumber-signup" placeholder="Phone Number">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="repairOrderNumber-signup">Repair Order Number:</label>
+            <div class="control">
+              <input class="input" type="text" id="repairOrderNumber-signup" placeholder="Repair Order Number">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="carModel-signup">Car Model:</label>
+            <div class="control">
+              <input class="input" type="text" id="carModel-signup" placeholder="Car Model">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="serviceRequested-signup">Service Requested:</label>
+            <div class="control">
+              <input class="input" type="text" id="serviceRequested-signup" placeholder="Service Requested">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label checkbox" for="waitingForService-signup">Waiter:</label>
+            <div class="control">
+              <input  type="checkbox" id="waitingForService-signup" placeholder="Waiting For Service">
+            </div>
+          </div>
+      </section>
+      <footer class="modal-card-foot">
+        <div class="buttons">
+          <button class="button is-success" type="submit">Save</button>
+          <button class="button">Cancel</button>
+        </div>
+      </footer>
+      </form>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  {{!-- End::Client Modal --}}
 
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
-  
+  <script src="/js/clientModal.js"></script>
+  <script src="/js/client.js"></script>
+
+
   {{/if}}
 </body>
 
