@@ -17,10 +17,14 @@
             <td>{{client.repairOrderNumber}}</td>
             <td>{{client.carModel}}</td>
             <td>{{client.serviceRequested}}</td>
-            <td>{{client.waitingForService}}</td>
+            <td>
+                {{#if client.waitingForService}}
+                Waiting
+                {{else}}
+                Dropped off
+                {{/if}}
+            </td>
         </tr>
         {{/each}}
     </tbody>
 </table>
-
-
