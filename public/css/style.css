@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .site-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer {
+    margin-top: auto;
+  }
+  
+  /* Add this to your /css/style.css */
+.table {
+    font-size: 1.5rem; /* Increase the font size */
+    font-family: 'Roboto', Arial, sans-serif; /* Modern, clean font */
+  }
+  
+  /* Optionally, increase the header font size for more emphasis */
+  .table th {
+    font-size: 2rem;
+  }
+
+  
+  

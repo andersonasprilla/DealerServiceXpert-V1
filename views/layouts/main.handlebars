@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
   <meta charset='UTF-8' />
   <title>Car-Service</title>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
->
-  <link rel='stylesheet' href='/css/jass.css' />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
   <link rel='stylesheet' href='/css/style.css' />
 </head>
 
@@ -18,28 +16,148 @@
         Car-Service
       </h1>
     </header>
-    <nav>
-      {{#if logged_in}}
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
 
-      <a href="/dashboard">Dashboard</a> |
-      <button class="button" id="create">Create Client</button>
-      <button class="no-button" id="logout">Logout</button>
-      {{else}}
-      <a href="/login">Login</a>
-      {{/if}}
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          
+          {{#if loggedIn}}
+          <button class="button is-primary is-hovered js-modal-trigger" data-target="modal-js-example">
+            Create Client
+          </button>
+          <a class="navbar-item" id="logout">Logout</a>
+          {{/if}}
+        </div>
+      </div>
     </nav>
+
     <main class='container container-fluid mt-5'>
       {{{body}}}
     </main>
   </div>
+  <footer class="footer has-background-light">
+    <div class="content has-text-centered">
+      <div class="columns">
+        <!-- About Us -->
+        <div class="column">
+          <h3>About Us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo
+            mollis, auctor consequat urna.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/services">Our Services</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="column">
+          <h3>Contact Info</h3>
+          <ul>
+            <li>Phone: (123) 456-7890</li>
+            <li>Email: info@example.com</li>
+            <li>Address: 1234 Street, City, Country</li>
+          </ul>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="column">
+          <h3>Follow Us</h3>
+          <div class="social-media-links">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i>
+              Twitter</a><br>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i>
+              Facebook</a><br>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i>
+              Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  {{!-- Begin::Client Modal --}}
+  <div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">New Client</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <form class="signup-form" id="clientForm">
+          <div class="field">
+            <label class="label" for="name-signup">Name:</label>
+            <div class="control">
+              <input class="input" type="text" id="name-signup" placeholder="Name">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="phoneNumber-signup">Phone Number:</label>
+            <div class="control">
+              <input class="input" type="text" id="phoneNumber-signup" placeholder="Phone Number">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="repairOrderNumber-signup">Repair Order Number:</label>
+            <div class="control">
+              <input class="input" type="text" id="repairOrderNumber-signup" placeholder="Repair Order Number">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="carModel-signup">Car Model:</label>
+            <div class="control">
+              <input class="input" type="text" id="carModel-signup" placeholder="Car Model">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="serviceRequested-signup">Service Requested:</label>
+            <div class="control">
+              <input class="input" type="text" id="serviceRequested-signup" placeholder="Service Requested">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label checkbox" for="waitingForService-signup">Waiter:</label>
+            <div class="control">
+              <input  type="checkbox" id="waitingForService-signup" placeholder="Waiting For Service">
+            </div>
+          </div>
+      </section>
+      <footer class="modal-card-foot">
+        <div class="buttons">
+          <button class="button is-success" type="submit">Save</button>
+          <button class="button">Cancel</button>
+        </div>
+      </footer>
+      </form>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  {{!-- End::Client Modal --}}
+
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  <script src="/js/clientModal.js"></script>
+  <script src="/js/client.js"></script>
+
+
+  {{/if}}
 </body>
 
-<footer class="footer">
-  <div class="row">
-    <p>
-      Car Service CRM
-    </p>
-  </div>
-</footer>
+
 
 </html>
