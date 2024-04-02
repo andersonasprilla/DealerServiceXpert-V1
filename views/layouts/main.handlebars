@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
   <meta charset='UTF-8' />
   <title>Car-Service</title>
@@ -8,86 +7,78 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
   <link rel='stylesheet' href='/css/style.css' />
 </head>
-
 <body class="bg-img ">
   <div class='flex-column justify-space-around'>
     <header class='display-flex justify-space-between align-center p-2'>
-      <nav class="navbar has-background-dark " role="navigation" aria-label="main navigation" >
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <h1 class="has-text-primary is-size-2 ">AutoAid Tracker</h1>
-
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item navbarlinks">
-        Home
-      </a>
-
-      <a class="navbar-item navbarlinks">
-        About Us
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link navbarlinks">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
+      <nav class="navbar has-background-dark " role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <h1 class="has-text-primary is-size-2 ">AutoAid Tracker</h1>
           </a>
-          <a class="navbar-item is-selected">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </a>
         </div>
-      </div>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        {{#if loggedIn}}
-          <button class="button is-primary is-hovered js-modal-trigger" data-target="modal-js-example">
-            Create Client
-          </button>
-          <a class="navbar-item" id="logout">Logout</a>
-          {{/if}}
-      </div>
-    </div>
-  </div>
-</nav>
-      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item navbarlinks">
+              Home
+            </a>
+            <a class="navbar-item navbarlinks">
+              About Us
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link navbarlinks">
+                More
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  About
+                </a>
+                <a class="navbar-item is-selected">
+                  Jobs
+                </a>
+                <a class="navbar-item">
+                  Contact
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Report an issue
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              {{#if loggedIn}}
+              <button class="button is-primary is-hovered js-modal-trigger" data-target="modal-js-example">
+                Create Client
+              </button>
+              <a class="navbar-item is-primary"
+               id="logout">Logout</a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
-
     <main class='container container-fluid mt-5'>
       {{{body}}}
     </main>
   </div>
-  <footer class="footer has-background-dark">
+  {{!-- <footer class="footer has-background-dark">
     <div class="content has-text-centered">
       <div class="columns">
         <!-- About Us -->
         <div class="column">
           <h3>About Us</h3>
-          <p>At Car Service, we're driven by a passion for simplifying car maintenance and repair services for everyone. Founded with a vision to transform the auto service industry.</p>
+          <p>At Car Service, we're driven by a passion for simplifying car maintenance and repair services for everyone.
+            Founded with a vision to transform the auto service industry.</p>
         </div>
-
         <!-- Quick Links -->
         <div class="column">
           <h3>Quick Links</h3>
@@ -98,7 +89,6 @@
             <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
-
         <!-- Contact Info -->
         <div class="column">
           <h3>Contact Info</h3>
@@ -108,7 +98,6 @@
             <li>Address: 1234 Street, City, Country</li>
           </ul>
         </div>
-
         <!-- Social Media Links -->
         <div class="column">
           <h3>Follow Us</h3>
@@ -123,8 +112,36 @@
         </div>
       </div>
     </div>
+  </footer> --}}
+  <footer class="footer has-background-dark has-text-light">
+    <div class="container">
+      <div class="columns">
+        <!-- About Us -->
+        <div class="column">
+          <h3 class="has-text-weight-semibold has-text-primary">About Us</h3>
+          <p>Connecting you to expert service advisors, ensuring your vehicle receives the care it needs with the convenience you deserve.</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="column">
+          <h3 class="has-text-weight-semibold has-text-primary">Social Media</h3>
+          <ul>
+            <li><a href="https://instagram.com" target="_blank" class="has-text-light">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank" class="has-text-light">X</a></li>
+            <li><a href="https://facebook.com" target="_blank" class="has-text-light">Facebook</a></li>
+          </ul>
+        </div>
+        <!-- Contact Info -->
+        <div class="column">
+          <h3 class="has-text-weight-semibold has-text-primary">Contact Info</h3>
+          <ul>
+            <li>Phone: (123) 456-7890</li>
+            <li>Email: contact@example.com</li>
+            <li>Address: 123 Main St, Anytown, USA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
-
   {{!-- Begin::Client Modal --}}
   <div id="modal-js-example" class="modal">
     <div class="modal-background"></div>
@@ -183,16 +200,10 @@
     <button class="modal-close is-large" aria-label="close"></button>
   </div>
   {{!-- End::Client Modal --}}
-
   {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   <script src="/js/clientModal.js"></script>
   <script src="/js/client.js"></script>
-
-
   {{/if}}
 </body>
-
-
-
 </html>
