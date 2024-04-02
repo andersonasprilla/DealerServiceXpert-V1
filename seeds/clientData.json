@@ -79,5 +79,78 @@
         "carModel": "Toyota Prius",
         "serviceRequested": "Oil Leak Inspection",
         "waitingForService": true
+    },
+    {
+        "name": "Jessica Davis",
+        "phoneNumber": "888-999-1111",
+        "repairOrderNumber": "888999",
+        "carModel": "Honda Accord",
+        "serviceRequested": "Tire Replacement",
+        "waitingForService": true
+    },
+    {
+        "name": "Michael Johnson",
+        "phoneNumber": "222-333-4444",
+        "repairOrderNumber": "222333",
+        "carModel": "Ford Focus",
+        "serviceRequested": "Brake Pad Replacement",
+        "waitingForService": false
+    },
+    {
+        "name": "Emily Thompson",
+        "phoneNumber": "555-444-3333",
+        "repairOrderNumber": "555444",
+        "carModel": "Chevrolet Malibu",
+        "serviceRequested": "Battery Check and Replacement",
+        "waitingForService": true
+    },
+    {
+        "name": "Robert Martinez",
+        "phoneNumber": "666-777-8888",
+        "repairOrderNumber": "666777",
+        "carModel": "Nissan Altima",
+        "serviceRequested": "AC System Repair",
+        "waitingForService": false
+    },
+    {
+        "name": "Samantha Brown",
+        "phoneNumber": "999-888-7777",
+        "repairOrderNumber": "999888",
+        "carModel": "Volkswagen Jetta",
+        "serviceRequested": "Engine Diagnostic Check",
+        "waitingForService": true
+    },
+    {
+        "name": "Christopher Garcia",
+        "phoneNumber": "111-222-3333",
+        "repairOrderNumber": "111222",
+        "carModel": "Subaru Forester",
+        "serviceRequested": "Transmission Inspection",
+        "waitingForService": false
+    },
+    {
+        "name": "Olivia Wilson",
+        "phoneNumber": "123-456-7890",
+        "repairOrderNumber": "123456",
+        "carModel": "Mazda CX-5",
+        "serviceRequested": "Windshield Replacement",
+        "waitingForService": true
+    },
+    {
+        "name": "Ethan Robinson",
+        "phoneNumber": "987-654-3210",
+        "repairOrderNumber": "987654",
+        "carModel": "Hyundai Sonata",
+        "serviceRequested": "Suspension Check",
+        "waitingForService": false
+    },
+    {
+        "name": "Sophia Martinez",
+        "phoneNumber": "321-654-9870",
+        "repairOrderNumber": "321654",
+        "carModel": "Tesla Model 3",
+        "serviceRequested": "Software Update",
+        "waitingForService": true
     }
+    
 ]
