@@ -22,7 +22,7 @@ html, body {
     font-family: 'Times New Roman', Times, serif;
   }
   h2.title{
-    color: #0DEAC8;
+    color: black;
     /* was black */
   }
   a.has-text-light {
