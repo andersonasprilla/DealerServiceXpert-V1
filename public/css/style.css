@@ -11,6 +11,8 @@ html, body {
     background-size: cover;
     background-position: center;
   }
+  
+   
   h1{
     display: table-cell;
     vertical-align: middle;
@@ -18,6 +20,13 @@ html, body {
     font-size: 25px;
     font-weight: 400;
     font-family: 'Times New Roman', Times, serif;
+  }
+  h2.title{
+    color: #0DEAC8;
+    /* was black */
+  }
+  a.has-text-light {
+    text-decoration: underline!important;
   }
   .site-content {
     flex: 1;
@@ -69,6 +78,7 @@ html, body {
   .table {
     font-size: 1.5rem; /* Increase the font size */
     font-family: 'Roboto', Arial, sans-serif; /* Modern, clean font */
+    /* margin-top: 25%; */
   }
   /* Optionally, increase the header font size for more emphasis */
   .table th {
@@ -81,4 +91,6 @@ html, body {
     border-style: groove;
 
   }
-  
+ a#logout.navbar-item.is-primary {
+    color: #0DEAC8;
+ }
