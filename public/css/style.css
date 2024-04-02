@@ -1,84 +1,90 @@
 html, body {
-    height: 100%;
-    margin: 0;
-  }
-  .bg-img {
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url('/assets/background3.png');
-    background-size: cover;
-    background-position: center;
-  }
-  h1{
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-    font-size: 25px;
-    font-weight: 400;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  .site-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .footer {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: auto;
-    height: 10%;
-    color: #ffff;
-    max-height: 17%;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 0%;
-    text-align: center;
-  }
-  .footer h3 {
-    font-size: 1.5em; /* Larger font size for headings */
-    color: #f5f5f5; /* Lighter shade for a bit of contrast */
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
-  .footer p, .footer ul {
-    font-size: 1em; /* Slightly larger font size for readability */
-  }
-  .footer a {
-    font-weight: bold; /* Bold font weight for links */
-    text-decoration: none; /* Remove underlines from links */
-    color: #e2e2e2; /* Light grey color for links */
-    text-align: center;
-    
-  }
-  .footer a:hover {
-    color: #ffffff; /* White color on hover for better visibility */
-    text-decoration: underline; /* Underline on hover for a classic link appearance */
-  }
-  h3{
-    color: white !important;
-  }
-  a{
-    text-decoration: none;
-  }
-  .navbarlinks {
+  height: 100%;
+  margin: 0;
+}
+.bg-img {
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url('/assets/background3.png');
+  background-size: cover;
+  background-position: center;
+}
+h1{
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+}
+h2.title{
+  color: black;
+}
+a.has-text-light {
+  text-decoration: underline!important;
+}
+.site-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: auto;
+  height: 10%;
   color: #ffff;
-  }
-  /* Add this to your /css/style.css */
-  .table {
-    font-size: 1.5rem; /* Increase the font size */
-    font-family: 'Roboto', Arial, sans-serif; /* Modern, clean font */
-  }
-  /* Optionally, increase the header font size for more emphasis */
-  .table th {
-    font-size: 2rem;
-    background-color:#0DEAC8;
-    border-style: groove; 
-  }
-
-  .table td {
-    border-style: groove;
-
-  }
-  
+  max-height: 17%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0%;
+  text-align: center;
+}
+.footer h3 {
+  font-size: 1.5em; /* Larger font size for headings */
+  color: #F5F5F5; /* Lighter shade for a bit of contrast */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.footer p, .footer ul {
+  font-size: 1em; /* Slightly larger font size for readability */
+}
+.footer a {
+  font-weight: bold; /* Bold font weight for links */
+  text-decoration: none; /* Remove underlines from links */
+  color: #E2E2E2; /* Light grey color for links */
+  text-align: center;
+}
+.footer a:hover {
+  color: #FFFFFF; /* White color on hover for better visibility */
+  text-decoration: underline; /* Underline on hover for a classic link appearance */
+}
+h3{
+  color: white !important;
+}
+a{
+  text-decoration: none;
+}
+.navbarlinks {
+color: #ffff;
+}
+/* Add this to your /css/style.css */
+.table {
+  font-size: 1.5rem; /* Increase the font size */
+  font-family: 'Roboto', Arial, sans-serif; /* Modern, clean font */
+  /* margin-top: 25%; */
+}
+/* Optionally, increase the header font size for more emphasis */
+.table th {
+  font-size: 2rem;
+  background-color:#0DEAC8;
+  border-style: groove;
+}
+.table td {
+  border-style: groove;
+}
+a#logout.navbar-item.is-primary {
+  color: #0DEAC8;
+}
