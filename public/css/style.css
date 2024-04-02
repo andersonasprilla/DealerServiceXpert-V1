@@ -85,6 +85,12 @@ color: #ffff;
 .table td {
   border-style: groove;
 }
+.spacer-row td {
+  height: 15px; /* Height of the spacer row */
+  background-color: transparent; /* Ensure the spacer row is invisible */
+  border: none; /* Remove any borders from the spacer row cells */
+  padding: 0; /* Remove padding from spacer row cells */
+}
 a#logout.navbar-item.is-primary {
   color: #0DEAC8;
 }
