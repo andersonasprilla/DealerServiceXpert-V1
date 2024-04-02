@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         {{#each clients as |client| }}
-        <tr>
+        <tr align="center">
             <td>{{client.name}}</td>
             <td>{{client.phoneNumber}}</td>
             <td>{{client.repairOrderNumber}}</td>
@@ -25,6 +25,7 @@
                 {{/if}}
             </td>
         </tr>
+        <tr class="spacer-row"><td colspan="6"></td></tr>
         {{/each}}
     </tbody>
 </table>
