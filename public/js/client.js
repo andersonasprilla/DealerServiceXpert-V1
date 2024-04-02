@@ -10,6 +10,7 @@ async function createClientHandler(event) {
     console.log(waitingForService)
 
     if(name && phoneNumber && repairOrderNumber && carModel && serviceRequested ) {
+    
         const response = await fetch('/api/clients', {
             method: 'post',
             body: JSON.stringify({
