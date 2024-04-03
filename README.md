@@ -1,5 +1,7 @@
 # AutoAid Tracker
 
+[Link to the app](https://autoaid-tracker-2e1109042824.herokuapp.com/dashboard)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
