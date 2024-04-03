@@ -82,7 +82,7 @@ Contributions to this project are welcome. Please fork the repository and submit
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me through my [LinkedIn](https://www.linkedin.com/in/andersonasprilla/) You can find more of my work at [GitHub](https://github.com/andersonasprilla).
+If you have any questions about the repo, open an issue or contact us through our [LinkedIn](https://www.linkedin.com/in/andersonasprilla/) You can find more of our work at [GitHub](https://github.com/andersonasprilla).
 
 
 
