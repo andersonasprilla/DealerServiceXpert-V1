@@ -55,7 +55,7 @@ The AutoAid Tracker is a sophisticated, backend-centric application tailored for
 
 ## Credits
 
-This project was developed by [Luis Asprilla](https://www.linkedin.com/in/andersonasprilla/), [Anica Barrios](https://www.linkedin.com/in/anica-barrios-b104062ab/) and [Matthew Gonzalez](https://www.linkedin.com/in/matthew-gonzalez-a1b6a7280/?trk=public-profile-join-page). Special thanks to Node.js, MySQL, and Inquirer.js documentation.
+This project was developed by [Luis Asprilla](https://www.linkedin.com/in/andersonasprilla/), [Anica Barrios](https://www.linkedin.com/in/anica-barrios-b104062ab/) and [Matthew Gonzalez](https://www.linkedin.com/in/matthew-gonzalez-a1b6a7280/?trk=public-profile-join-page). Special thanks to Node.js, and MySQL documentation.
 
 ## License
 This project is licensed under the MIT License. For more information, please visit [here](https://opensource.org/licenses/MIT).
